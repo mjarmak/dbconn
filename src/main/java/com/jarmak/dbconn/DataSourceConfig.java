@@ -8,15 +8,14 @@ import org.springframework.context.annotation.Configuration;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
-@Configuration
+//@Configuration
 public class DataSourceConfig {
 
     private static final Logger logger = LoggerFactory.getLogger(DataSourceConfig.class);
 
-    @Bean
+//    @Bean
     public DataSource datasource() {
         logger.info("Datasource config runs");
-
         try {
 //            JndiObjectFactoryBean bean = new JndiObjectFactoryBean();
 //            bean.setJndiName("jdbc/myJndiResource");
