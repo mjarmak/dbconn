@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+	version="1.0">
+
+	<persistence-unit name="openjpa" transaction-type="RESOURCE_LOCAL">
+		<provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+		<non-jta-data-source>java:comp/env/jdbc/CasperDataSource</non-jta-data-source>
+		<mapping-file>META-INF/orm.xml</mapping-file>
+		<properties>			
+			<property name="openjpa.RemoteCommitProvider" value="sjvm" />
+			<property name="openjpa.ConnectionRetainMode" value="on-demand" />
+			<property name="javax.persistence.query.timeout" value="0" />
+			<property name="openjpa.RuntimeUnenhancedClasses" value="unsupported"/>
+			<property name="openjpa.jdbc.DBDictionary" value="eu.ecb.casper.configuration.CustomOracleDictionary"/>
+		</properties>
+	</persistence-unit>
+</persistence>
