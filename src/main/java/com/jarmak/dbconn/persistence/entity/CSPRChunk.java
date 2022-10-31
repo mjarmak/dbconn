@@ -1,4 +1,4 @@
-package com.jarmak.dbconn.entity;
+package com.jarmak.dbconn.persistence.entity;
 
 import lombok.Data;
 

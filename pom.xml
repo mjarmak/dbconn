@@ -38,6 +38,12 @@
 			<groupId>org.apache.openjpa</groupId>
 			<artifactId>openjpa-maven-plugin</artifactId>
 			<version>${openjpa.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.sonatype.plexus</groupId>
+					<artifactId>plexus-cipher</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 		<dependency>
